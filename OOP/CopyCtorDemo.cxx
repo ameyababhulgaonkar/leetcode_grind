@@ -71,9 +71,9 @@ class ECar : public Car
 int main()
 {
     PetrolCar car;
-    std::unique_ptr<PetrolCar> car2 = std::make_unique<PetrolCar>(car);
+    std::unique_ptr<PetrolCar> car2 = std::make_unique<PetrolCar>(car); // calls Copy Constructor
     PetrolCar car3;
-    car3 = car3;
+    car3 = car3; // calls Copy Assignment Operator
 
     return 0;
 }
